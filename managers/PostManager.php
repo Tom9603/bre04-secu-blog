@@ -22,11 +22,7 @@ class PostManager extends AbstractManager
         foreach ($result as $item) {
             $author = $this->userManager->findOne((int)$item["author_id"]);
             $post = new Post(
-                $item["title"],
-                $item["excerpt"],
-                $item["content"],
-                $author,
-                new \DateTimeImmutable($item["created_at"])
+                $item["title"], $item["excerpt"], $item["content"], $author, new \DateTimeImmutable($item["created_at"])
             );
             $post->setId((int)$item["id"]);
             $posts[] = $post;
@@ -43,11 +39,7 @@ class PostManager extends AbstractManager
         if ($item) {
             $author = $this->userManager->findOne((int)$item["author_id"]);
             $post = new Post(
-                $item["title"],
-                $item["excerpt"],
-                $item["content"],
-                $author,
-                new \DateTimeImmutable($item["created_at"])
+                $item["title"], $item["excerpt"], $item["content"], $author, new \DateTimeImmutable($item["created_at"])
             );
             $post->setId((int)$item["id"]);
             return $post;
@@ -65,11 +57,7 @@ class PostManager extends AbstractManager
         foreach ($result as $item) {
             $author = $this->userManager->findOne((int)$item["author_id"]);
             $post = new Post(
-                $item["title"],
-                $item["excerpt"],
-                $item["content"],
-                $author,
-                new \DateTimeImmutable($item["created_at"])
+                $item["title"], $item["excerpt"], $item["content"], $author, new \DateTimeImmutable($item["created_at"])
             );
             $post->setId((int)$item["id"]);
             $posts[] = $post;
