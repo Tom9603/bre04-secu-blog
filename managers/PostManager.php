@@ -10,7 +10,7 @@ class PostManager extends AbstractManager
 
     public function __construct() {
         parent::__construct();
-        $this->userManager = new UserManager(); // pour récupérer les objets User
+        $this->userManager = new UserManager();
     }
 
     public function findLatest(): array {

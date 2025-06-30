@@ -7,6 +7,7 @@
 class Post
 {
     private ?int $id = null;
+    private array $categories = [];
     private string $title;
     private string $excerpt;
     private string $content;
@@ -20,7 +21,23 @@ class Post
         $this->author = $author;
         $this->created_at = $created_at;
     }
-
+    
+    public function getId(): ?int {
+        return $this->id;
+    }
+    
+    public function setId(?int $id) : void {
+        $this->id = $id;
+    }
+    
+    public function getCategories(): array {
+        return $this->categories;
+    }
+    
+    public function setCategories(array $categories) : void {
+        $this->categories = $categories;
+    }
+    
     public function getTitle(): string {
         return $this->title;
     }

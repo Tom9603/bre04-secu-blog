@@ -4,18 +4,17 @@
  * @link : https://github.com/Gaellan
  */
 
-
 class Comment
 {
     private ?int $id = null;
     private string $content;
-    private int $user_id;
-    private int $post_id;
+    private int $user;
+    private int $post;
 
-    public function __construct(string $content, int $user_id, int $post_id) {
+    public function __construct(string $content, int $user, int $post) {
         $this->content = $content;
-        $this->user_id = $user_id;
-        $this->post_id = $post_id;
+        $this->user = $user;
+        $this->post = $post;
     }
 
     public function getId(): ?int {
@@ -26,27 +25,27 @@ class Comment
         return $this->content;
     }
 
-    public function getUserId(): int {
-        return $this->user_id;
+    public function getUser(): int {
+        return $this->user;
     }
     
-    public function getPostId(): int {
-        return $this->post_id;
+    public function getPost(): int {
+        return $this->post;
     }
     
-    public function setId(?int $id) : void {
+    public function setId(?int $id): void {
         $this->id = $id;
     }
     
-    public function setContent(string $content) : void {
+    public function setContent(string $content): void {
         $this->content = $content;
     }
     
-    public function setUserId(int $user_id) : void {
-        $this->user_id = $user_id;
+    public function setUser(int $user): void {
+        $this->user = $user;
     }
     
-    public function setPostId(int $post_id) : void {
-        $this->post_id = $post_id;
+    public function setPost(int $post): void {
+        $this->post = $post;
     }
 }
